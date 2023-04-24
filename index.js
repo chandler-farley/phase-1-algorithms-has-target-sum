@@ -1,13 +1,26 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true
+      }
+    }
+  }
+  return false
 }
 
 /* 
   Write the Big O time complexity of your function here
+  0(n^2)
 */
 
 /* 
   Add your pseudocode here
+  iterate through the array from element 0 to n
+  iterate through the array from element 1 to n
+  add numbers together and compare to target
+  return true if numbers ===
 */
 
 /*
